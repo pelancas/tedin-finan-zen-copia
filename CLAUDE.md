@@ -1,7 +1,7 @@
 # Orienta — Guia de Design e Metodologia do Site
 
 Site institucional/educacional de finanças pessoais ("Orienta"), com calculadoras
-financeiras, conteúdo educativo e páginas de produto (seguros, investimentos, planejamento).
+financeiras, conteúdo educativo e páginas de produto (planejamento, impostos, imóveis).
 Tagline: *"Dê rumo à sua vida financeira."* Tom de voz: profissional mas acessível, direto,
 fala com o leitor na 2ª pessoa ("você"), ocasionalmente usa emojis em títulos de calculadoras
 (ex.: "💰💰💰"). Público-alvo: pessoas comuns buscando educação financeira, não especialistas.
@@ -39,8 +39,8 @@ src/
     ui/        → primitives shadcn (não editar estilo à mão, só compor)
     layout/    → Header, Footer, Layout, ToolPageLayout, CalculadoraSidebar, CalculadoraTextBlock
     home/      → seções específicas da home (Hero, Calculadoras, SeusPrimeiros)
-  pages/       → uma pasta por área temática: planejamento/, investimentos/, seguros/,
-                 impostos/, imoveis/ — cada página é o componente roteado em App.tsx
+  pages/       → uma pasta por área temática: planejamento/, impostos/, imoveis/ —
+                 cada página é o componente roteado em App.tsx
   tools/       → calculadoras "standalone" mais elaboradas (ex.: CalculadoraMilhao.tsx)
   hooks/       → hooks utilitários (use-mobile, use-toast)
   lib/         → utils.ts (função cn), content-parser.ts, useContentFolder.ts
@@ -49,8 +49,8 @@ src/
 Convenção de nomes: componentes em PascalCase, um componente por arquivo, nome do arquivo =
 nome do componente exportado. Páginas ficam em `src/pages/<area>/<Nome>.tsx` e são registradas
 como `<Route>` em `src/App.tsx` com paths como `/planejamento/calculadoras/aposentadoria`,
-`/investimentos/renda-fixa/comparador` — sempre em português, kebab-case, agrupadas por área
-temática (`planejamento`, `investimentos`, `seguros`, `impostos`, `imoveis`).
+`/imoveis/calculadoras/posso-comprar` — sempre em português, kebab-case, agrupadas por área
+temática (`planejamento`, `impostos`, `imoveis`).
 
 ## Sistema de design (tokens)
 
@@ -168,14 +168,15 @@ Padrões a manter:
   demais itens do menu que são links com `border-b-2` ativo.
 - Dropdowns fecham ao clicar fora (`useRef` + listener `mousedown`) e ao trocar de rota.
 - Menu mobile bloqueia scroll do body (`position: fixed` + restaura `scrollY` ao fechar).
-- Estrutura de navegação por área: **Seus Primeiros** (Imóveis "em breve", Seguros,
-  Investimentos, Planejamento) · **Ferramentas** (lista de calculadoras) · **Artigos** · **Sobre**
-  (link externo para Instagram).
+- Estrutura de navegação por área: **Seus Primeiros** (Imóveis "em breve", Planejamento) ·
+  **Ferramentas** (lista de calculadoras) · **Sobre** (link externo para Instagram).
+- `artigosItems` continua exportado de `Header.tsx` (consumido pelo Footer), mas o próprio
+  Header não tem mais um item de navegação "Artigos" — foi removido de propósito.
 
 ## Footer
 
 Grid de 5 colunas (`lg:grid-cols-5`): logo + descrição + Instagram (2 colunas), depois colunas
-de links por área temática (Planejamento, Investimentos, ...), barra final com copyright
+de links por área temática (Planejamento, Ferramentas, Artigos), barra final com copyright
 centralizado. Tudo em Tailwind + tokens, sem `vt-*`.
 
 ## SEO / meta

@@ -53,7 +53,7 @@ const services = [
 const Index = () => {
   useDocumentMeta(
     "Orienta | Calculadoras e Educação Financeira Grátis",
-    "Calculadoras gratuitas de aposentadoria, seguros e investimentos, guias práticos e artigos para você planejar sua vida financeira com mais segurança.",
+    "Calculadoras gratuitas de aposentadoria, metas financeiras e avaliação de imóveis, guias práticos e artigos para você planejar sua vida financeira com mais segurança.",
   );
 
   return (

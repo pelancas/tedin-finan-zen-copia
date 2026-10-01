@@ -557,7 +557,7 @@ export default function CalculadoraPossoComprar() {
             resources={[
               { icon: "calc", title: "Calculadora do Milhão", desc: "Quanto tempo até seu primeiro milhão.", href: "#/planejamento/calculadoras/milhao" },
               { icon: "calc", title: "Calculadora de Metas", desc: "O poder do tempo ao seu favor.", href: "#/planejamento/calculadoras/metas" },
-              { icon: "stats", title: "Comparador de Renda Fixa", desc: "Calcule qual melhor produto.", href: "#/investimentos/renda-fixa/comparador" },
+              { icon: "bank", title: "Guia de Imposto de Renda", desc: "Declare sem dor de cabeça.", href: "#/impostos" },
               { icon: "article", title: "Formas de Economizar", desc: "Pequenas mudanças, grandes resultados.", href: "#/planejamento/despesas" },
             ]}
           />

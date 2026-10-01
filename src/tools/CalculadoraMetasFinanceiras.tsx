@@ -469,16 +469,16 @@ export default function CalculadoraMetasFinanceiras() {
           <CalculadoraSidebar
             promo={{
               image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBiIAZZ1_Gx_i7qJnBZuqdTW1gDH3BRnNYO_BEfyALedW6hdQWTMrCxvimHAEd8ExDNnqlKeuvR-2F8QjxPY9Dqa6TRS04rbJ4IHfWuEKjtYGv7TfDybTd72owjQcX4oPr4yCEaVGqfCSdYjZuiJMMUjzND-N92XHg60Wl0AW6pVWYbkVseir6LsmR7lMTIUZUghLYar5-r4fWxk-6_SdT0ZodH-4-NK0c10UUt2AWOvWW4ONhyInd5nJ0-mswYeBWEQUOaxjfpSaAH",
-              imageAlt: "Moedas empilhadas com planta crescendo",
-              badge: "Destaque",
-              title: "Quanto de seguro de vida você precisa?",
-              description: "Descubra o capital ideal para proteger quem depende de você.",
-              href: "#/seguros",
+              imageAlt: "Casa com selo de avaliação de risco",
+              badge: "Antes de comprar",
+              title: "Relatório de Avaliação de Riscos",
+              description: "Confira certidões e processos do vendedor antes de fechar negócio.",
+              href: "#/relatorio-avaliacao-riscos",
             }}
             resources={[
               { icon: "article", title: "As Melhores Formas de Economizar", desc: "Pequenas mudanças, grandes resultados.", href: "#/planejamento/despesas" },
-              { icon: "stats", title: "Comparador de Renda Fixa", desc: "Calcule qual melhor produto.", href: "#/investimentos/renda-fixa/comparador" },
-              { icon: "bank", title: "Fundos, o que são", desc: "Qual o melhor para sua meta?", href: "#/investimentos/fundos" },
+              { icon: "calc", title: "Calculadora do Milhão", desc: "Quanto tempo até seu primeiro milhão.", href: "#/planejamento/calculadoras/milhao" },
+              { icon: "calc", title: "Posso comprar este imóvel?", desc: "Veja se cabe no seu orçamento.", href: "#/imoveis/calculadoras/posso-comprar" },
               { icon: "calc", title: "Calculadora de Aposentadoria", desc: "O poder do tempo ao seu favor.", href: "#/planejamento/calculadoras/aposentadoria" },
             ]}
           />

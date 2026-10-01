@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, TrendingUp, Target, Trophy, BarChart2 } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, Trophy } from "lucide-react";
 
 const calculadoras = [
   {
@@ -25,14 +25,6 @@ const calculadoras = [
     href: "/planejamento/calculadoras/milhao",
     color: "#34d399",
     bg: "rgba(52,211,153,0.12)",
-  },
-  {
-    icon: BarChart2,
-    label: "Comparador de renda fixa",
-    description: "Compare CDB, LCI, LCA, Tesouro e outros produtos lado a lado.",
-    href: "/investimentos/renda-fixa/comparador",
-    color: "#0d9488",
-    bg: "rgba(13,148,136,0.1)",
   },
 ];
 

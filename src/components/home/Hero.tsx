@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Building2, Shield, TrendingUp, Calculator } from "lucide-react";
+import { ArrowRight, Sparkles, Building2, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
-import { SeusPrimeiros } from "@/components/home/SeusPrimeiros";
 import { Calculadoras } from "@/components/home/Calculadoras";
 import { artigosItems } from "@/components/layout/Header";
 
 const satelites = [
   { key: "imoveis", label: "Imóveis", icon: Building2, style: { left: "50%", top: "0%" } },
-  { key: "seguros", label: "Seguros", icon: Shield, style: { left: "100%", top: "50%" } },
-  { key: "investimentos", label: "Investimentos", icon: TrendingUp, style: { left: "50%", top: "100%" } },
   { key: "planejamento", label: "Planejamentos", icon: Calculator, style: { left: "0%", top: "50%" } },
 ];
 
@@ -72,16 +69,11 @@ export function Hero() {
           <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full overflow-visible" style={{ filter: "drop-shadow(0 0 2px rgba(29,175,102,0.6))" }}>
             <g stroke="#1daf66" strokeOpacity="0.55" strokeWidth="0.6" strokeDasharray="1.5 3" fill="none" strokeLinecap="round">
               <line x1="50" y1="50" x2="50" y2="0" />
-              <line x1="50" y1="50" x2="100" y2="50" />
-              <line x1="50" y1="50" x2="50" y2="100" />
               <line x1="50" y1="50" x2="0" y2="50" />
-              <polygon points="50,0 100,50 50,100 0,50" />
             </g>
             <g fill="#1daf66">
               <circle cx="50" cy="50" r="1.3" />
               <circle cx="50" cy="25" r="1.1" />
-              <circle cx="75" cy="50" r="1.1" />
-              <circle cx="50" cy="75" r="1.1" />
               <circle cx="25" cy="50" r="1.1" />
             </g>
           </svg>
@@ -128,7 +120,6 @@ export function Hero() {
       </div>
     </div>
   </section>
-  <SeusPrimeiros />
   {/* Artigos Section - Lightened (Light Background) */}
   <section
     className="py-20 bg-background-light text-surface-dark"
@@ -136,27 +127,7 @@ export function Hero() {
   >
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-black mb-4">
-            Artigos
-          </h2>
-          <p className="text-slate-600 max-w-2xl">
-            Textos para te ajudar a entender melhor suas finanças e tomar
-            decisões com mais clareza.
-          </p>
-        </div>
-        <div className="flex w-full flex-col gap-3 md:w-96 shrink-0">
-          {artigosItems.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className="group flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-5 py-3.5 text-sm font-semibold text-surface-dark transition-colors hover:border-primary hover:text-primary"
-            >
-              <span>{item.name}</span>
-              <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" />
-            </Link>
-          ))}
-        </div>
+
       </div>
     </div>
   </section>

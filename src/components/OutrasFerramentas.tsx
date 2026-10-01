@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, PiggyBank, Home, Wallet, ArrowRight, type LucideIcon } from "lucide-react";
+import { PiggyBank, Home, Wallet, ArrowRight, type LucideIcon } from "lucide-react";
 
 interface FerramentaItem {
   titulo: string;
@@ -9,12 +9,6 @@ interface FerramentaItem {
 }
 
 const FERRAMENTAS: FerramentaItem[] = [
-  {
-    titulo: "Calculadora de seguros",
-    descricao: "Descubra quanto de seguro de vida ou invalidez você realmente precisa.",
-    href: "/seguros",
-    icon: Shield,
-  },
   {
     titulo: "Calculadora de aposentadoria",
     descricao: "Descubra quanto guardar todo mês para se aposentar com tranquilidade.",

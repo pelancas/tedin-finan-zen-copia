@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import Logo from "@/assets/logo-no-bg.png";
-import { Instagram, Youtube, Building2, Shield, TrendingUp, Calculator } from "lucide-react";
+import { Instagram, Youtube, Building2, Calculator } from "lucide-react";
 import { EMPRESA, WHATSAPP_URL, EMAIL_URL } from "@/lib/empresa";
 import {
   INSTAGRAM_URL,
   primeirosImoveis,
-  primeirosSeguros,
-  primeirosInvestimentos,
   primeirosPlanejamento,
   ferramentasItems,
   artigosItems,
@@ -14,8 +12,6 @@ import {
 
 const primeirosGroups = [
   { key: "imoveis", label: "Imóveis", icon: Building2, links: primeirosImoveis },
-  { key: "seguros", label: "Seguros", icon: Shield, links: primeirosSeguros },
-  { key: "investimentos", label: "Investimentos", icon: TrendingUp, links: primeirosInvestimentos },
   { key: "planejamento", label: "Planejamentos", icon: Calculator, links: primeirosPlanejamento },
 ];
 
